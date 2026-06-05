@@ -1,0 +1,175 @@
+// ─────────────────────────────────────────
+// _global.scss
+// ─────────────────────────────────────────
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: $font-sans;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba($accent, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba($teal, 0.07) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+strong {
+  color: $text;
+  font-weight: 500;
+}
+
+// ── SCROLL PROGRESS BAR ──
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, $accent, $teal);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 1000;
+  pointer-events: none;
+  transition: transform 0.08s linear;
+}
+
+// ── WRAPPER ──
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+// ── REVEAL ANIMATION (scroll-triggered via useReveal hook) ──
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ── KEYFRAMES ──
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+// ── BACKGROUND ORBS ──
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 700px;
+  height: 700px;
+  top: -15%;
+  left: -15%;
+  background: radial-gradient(circle, rgba($accent, 0.32) 0%, rgba($accent, 0.08) 50%, transparent 70%);
+  animation: orbFloat1 20s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 580px;
+  height: 580px;
+  top: 25%;
+  right: -12%;
+  background: radial-gradient(circle, rgba($teal, 0.28) 0%, rgba($teal, 0.07) 50%, transparent 70%);
+  animation: orbFloat2 25s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 500px;
+  height: 500px;
+  bottom: 10%;
+  left: 10%;
+  background: radial-gradient(circle, rgba($accent2, 0.22) 0%, rgba($accent2, 0.06) 50%, transparent 70%);
+  animation: orbFloat3 30s ease-in-out infinite;
+}
+
+.orb-4 {
+  width: 420px;
+  height: 420px;
+  top: 55%;
+  left: 45%;
+  background: radial-gradient(circle, rgba($teal, 0.18) 0%, rgba($accent, 0.06) 50%, transparent 70%);
+  animation: orbFloat1 22s ease-in-out infinite reverse;
+}
+
+@keyframes orbFloat1 {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  25%  { transform: translate(80px, -60px)  scale(1.06); }
+  50%  { transform: translate(40px,  80px)  scale(0.96); }
+  75%  { transform: translate(-50px, 30px)  scale(1.03); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+@keyframes orbFloat2 {
+  0%   { transform: translate(0px,    0px)   scale(1);    }
+  30%  { transform: translate(-70px,  70px)  scale(1.07); }
+  60%  { transform: translate(60px,  -50px)  scale(0.94); }
+  100% { transform: translate(0px,    0px)   scale(1);    }
+}
+
+@keyframes orbFloat3 {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  35%  { transform: translate(60px,  60px)  scale(1.05); }
+  65%  { transform: translate(-80px, -30px) scale(0.95); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+// ── MOLECULE ANIMATIONS ──
+@keyframes molFloat1 {
+  0%   { transform: translate(0px,   0px)  rotate(0deg);   }
+  20%  { transform: translate(18px, -22px) rotate(15deg);  }
+  45%  { transform: translate(-14px, 20px) rotate(-8deg);  }
+  70%  { transform: translate(22px,  12px) rotate(20deg);  }
+  100% { transform: translate(0px,   0px)  rotate(0deg);   }
+}
+
+@keyframes molFloat2 {
+  0%   { transform: translate(0px,    0px)  rotate(0deg);   }
+  25%  { transform: translate(-20px,  15px) rotate(-12deg); }
+  55%  { transform: translate(16px,  -18px) rotate(10deg);  }
+  80%  { transform: translate(-10px,  22px) rotate(-6deg);  }
+  100% { transform: translate(0px,    0px)  rotate(0deg);   }
+}
+
+@keyframes molFloat3 {
+  0%   { transform: translate(0px,  0px)   rotate(0deg);   }
+  30%  { transform: translate(12px, 20px)  rotate(18deg);  }
+  60%  { transform: translate(-18px, -8px) rotate(-14deg); }
+  85%  { transform: translate(8px,  -20px) rotate(8deg);   }
+  100% { transform: translate(0px,  0px)   rotate(0deg);   }
+}

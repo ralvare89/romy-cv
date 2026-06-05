@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Romy Alvarez Fernandez",
+    "role": "Senior Front-End Engineer",
+    "subtitle": "Building enterprise web experiences at scale"
+  },
+  "contact": {
+    "location": "Grecia, Costa Rica",
+    "phone": "+506 8529-7242",
+    "email": "ralvare89@gmail.com"
+  },
+  "profile": {
+    "paragraphs": [
+      "Front-End Engineer with over <strong>12 years of experience</strong> building large-scale digital platforms in enterprise environments. Specialized in <strong>CMS-driven architectures</strong>, modular component systems, and API integration.",
+      "I have led teams as <strong>Principal Front-End Developer</strong>, defining technical standards, guiding release workflows, and mentoring developers. My approach combines <strong>pixel-perfect quality</strong>, WCAG accessibility, SEO, and performance.",
+      "I work with AEM, Sitecore, and Drupal — with transferable knowledge to headless platforms such as <strong>Contentful, Strapi, and Sanity</strong>."
+    ],
+    "stats": [
+      { "num": "12+", "label": "years of experience" },
+      { "num": "4",   "label": "enterprise CMS" },
+      { "num": "2",   "label": "global companies" },
+      { "num": "∞",   "label": "scalable components" }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Languages & Frameworks",
+      "tags": ["JavaScript ES6+", "TypeScript", "HTML5", "CSS3", "React", "AngularJS", "jQuery"]
+    },
+    {
+      "category": "CMS Platforms",
+      "tags": ["AEM", "Sitecore", "Drupal", "WordPress", "Joomla", "EPiServer", "Contentful"]
+    },
+    {
+      "category": "Styles & Preprocessors",
+      "tags": ["SCSS/SASS", "LESS", "Bootstrap", "Tailwind", "BEM"]
+    },
+    {
+      "category": "Tools & Workflows",
+      "tags": ["Git / GitHub", "Bitbucket", "Webpack", "Gulp", "npm", "Jira", "Agile"]
+    },
+    {
+      "category": "Design & Collaboration",
+      "tags": ["Figma", "Adobe XD", "Sketch", "GSAP", "Framer Motion"]
+    },
+    {
+      "category": "Standards & Best Practices",
+      "tags": ["WCAG / ARIA", "SEO", "REST API", "JSON / XML", "Mobile-First", "MVC"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Accenture",
+      "role": "Front-End Developer — AEM",
+      "period": "May 2025 — Present",
+      "current": true,
+      "bullets": [
+        "Development and customization of AEM components, dialogs, and templates for enterprise web applications.",
+        "Styling with HTML5, CSS3 (SASS/LESS), and JavaScript ES6+, ensuring responsive and accessible layouts.",
+        "Implementation of animations using JavaScript, GSAP, and Framer Motion.",
+        "Translation of Figma / Adobe XD designs into reusable and scalable front-end components.",
+        "Ensures compliance with WCAG, SEO, and cross-browser standards.",
+        "Coordination with QA and backend teams to validate component and API integrations."
+      ]
+    },
+    {
+      "company": "PGD",
+      "role": "Principal Front-End Developer",
+      "period": "2022 — 2024",
+      "current": false,
+      "badge": "Lead",
+      "bullets": [
+        "Led front-end architecture across CMS platforms including AEM, Sitecore, Drupal, and ReactJS projects.",
+        "Standardized master templates to improve production efficiency at scale.",
+        "Defined release workflows, Git strategies, and conducted code reviews.",
+        "Collaborated with clients on requirements gathering and project estimations.",
+        "Mentored and guided junior developers through onboarding and best practices."
+      ]
+    },
+    {
+      "company": "PGD",
+      "role": "Senior Front-End Developer",
+      "period": "2016 — 2022",
+      "current": false,
+      "bullets": [
+        "Developed responsive enterprise websites using AEM and Sitecore with reusable component architectures.",
+        "Collaborated with SEO teams to ensure technical optimization and metadata implementation.",
+        "Guaranteed accessibility compliance, cross-browser compatibility, and responsive design.",
+        "Provided technical mentorship and support to content authors."
+      ]
+    },
+    {
+      "company": "Accenture",
+      "role": "Mid-Senior Front-End Developer",
+      "period": "2013 — 2016",
+      "current": false,
+      "bullets": [
+        "Developed and integrated responsive web applications for global pharmaceutical clients.",
+        "Migrated legacy HTML sites to responsive frameworks (Bootstrap, Foundation).",
+        "Worked on Veeva iRep applications and website migrations.",
+        "Integrated external services and supported CMS migrations ensuring compliance with brand guidelines."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Systems Engineering",
+      "institution": "Universidad Latina de Costa Rica"
+    },
+    {
+      "degree": "Web Development & Design",
+      "institution": "Universidad Cenfotec"
+    }
+  ],
+  "references": [
+    {
+      "name": "Luis Diego Orozco Coto",
+      "initials": "DO",
+      "role": "Front-End Engineer",
+      "company": "Firmex",
+      "phone": "+506 8345 4133",
+      "email": "ldorozco@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/dorozco87/"
+    },
+    {
+      "name": "Manfred Salazar Morales",
+      "initials": "MS",
+      "role": "Principal Front-End Developer",
+      "company": "PGD",
+      "phone": "+506 7019 3819",
+      "email": "manfred19@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/msalazarm19/"
+    },
+    {
+      "name": "Franklin Córdoba Mejías",
+      "initials": "FC",
+      "role": "Senior Software Engineer",
+      "company": "Accenture",
+      "phone": "+506 8312 6527",
+      "email": "fcordobamejias@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/franklin-c%C3%B3rdoba-mej%C3%ADas-92458132/"
+    },
+    {
+      "name": "Juan Pablo Muñoz Vargas",
+      "initials": "JP",
+      "role": "Senior Front-End Developer",
+      "company": "PGD",
+      "phone": "+506 8321 7238",
+      "email": "juanpamv3@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/juanpamunoz/"
+    }
+  ]
+}

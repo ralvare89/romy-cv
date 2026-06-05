@@ -1,0 +1,25 @@
+// Cursor.module.scss
+@use '../styles/variables' as *;
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: $accent2;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+.ring {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba($accent, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,57 @@
+// Skills.module.scss
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.skills {
+  padding: 4rem 0;
+}
+
+.label {
+  @include section-label;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.group {
+  @include card-base;
+  padding: 1.4rem;
+
+  &:hover {
+    border-color: rgba($accent, 0.4);
+    background: $surface2;
+  }
+}
+
+.groupTitle {
+  @include mono(10px, 0.15em);
+  text-transform: uppercase;
+  color: $teal;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tag {
+  @include mono(11px);
+  color: $text2;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid $border2;
+  padding: 0.25rem 0.7rem;
+  border-radius: $radius-sm;
+  cursor: default;
+  transition: $transition;
+
+  &:hover {
+    background: rgba($accent, 0.15);
+    border-color: $accent;
+    color: $accent3;
+  }
+}

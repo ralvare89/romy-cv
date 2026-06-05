@@ -1,0 +1,65 @@
+// ─────────────────────────────────────────
+// _mixins.scss
+// ─────────────────────────────────────────
+@use 'variables' as *;
+
+@mixin mono($size: 11px, $spacing: 0.12em) {
+  font-family: $font-mono;
+  font-size: $size;
+  letter-spacing: $spacing;
+}
+
+@mixin display($size: 1rem, $weight: 700) {
+  font-family: $font-display;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin section-label {
+  @include mono(10px, 0.2em);
+  color: $accent2;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $border2;
+  }
+}
+
+@mixin card-base {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  transition: $transition;
+}
+
+@mixin card-hover {
+  &:hover {
+    border-color: rgba($accent, 0.4);
+    transform: translateY(-2px);
+  }
+}
+
+@mixin reveal-anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin respond-to($bp) {
+  @if $bp == 'sm' { @media (max-width: 500px) { @content; } }
+  @if $bp == 'md' { @media (max-width: 640px) { @content; } }
+  @if $bp == 'lg' { @media (max-width: 900px) { @content; } }
+}

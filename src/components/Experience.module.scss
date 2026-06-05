@@ -1,0 +1,123 @@
+// Experience.module.scss
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.experience {
+  padding: 4rem 0;
+}
+
+.label {
+  @include section-label;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid $border;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+  @include respond-to('md') {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dateCol {
+  padding-top: 0.2rem;
+}
+
+.period {
+  @include mono(11px, 0.05em);
+  color: $text3;
+  line-height: 1.5;
+}
+
+.company {
+  @include mono(10px, 0.12em);
+  text-transform: uppercase;
+  color: $accent2;
+  margin-top: 0.5rem;
+}
+
+.role {
+  @include display(1.2rem, 700);
+  color: $text;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.badgeCurrent {
+  @include mono(10px, 0.1em);
+  color: $teal;
+  background: rgba($teal, 0.1);
+  border: 1px solid rgba($teal, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: $radius-xl;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: $teal;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+}
+
+.badgeChip {
+  @include mono(10px, 0.12em);
+  text-transform: uppercase;
+  color: $amber;
+  background: rgba($amber, 0.08);
+  border: 1px solid rgba($amber, 0.2);
+  padding: 0.15rem 0.5rem;
+  border-radius: $radius-sm;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  li {
+    color: $text2;
+    font-size: 13.5px;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.65;
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: $accent;
+      font-size: 10px;
+      top: 4px;
+    }
+  }
+}

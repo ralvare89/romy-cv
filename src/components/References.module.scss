@@ -1,0 +1,126 @@
+// References.module.scss
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.refs {
+  padding: 4rem 0;
+}
+
+.label {
+  @include section-label;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  @include respond-to('lg') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to('sm') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  @include card-base;
+  @include card-hover;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $accent, $teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include display(13px, 800);
+  color: white;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.linkedinBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: $radius-sm;
+  color: $text3;
+  background: transparent;
+  transition: color 0.2s, background 0.2s;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    color: #0a66c2;
+    background: rgba(10, 102, 194, 0.1);
+  }
+}
+
+.name {
+  @include display(0.92rem, 700);
+  color: $text;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.role {
+  font-size: 11.5px;
+  color: $text3;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid $border;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include mono(10.5px);
+  color: $text3;
+  text-decoration: none;
+  transition: color 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    color: $accent2;
+
+    svg { opacity: 1; }
+  }
+}

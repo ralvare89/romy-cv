@@ -1,0 +1,60 @@
+// Education.module.scss
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.education {
+  padding: 4rem 0;
+}
+
+.label {
+  @include section-label;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @include respond-to('sm') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  @include card-base;
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $accent, $teal);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &:hover {
+    border-color: rgba($accent, 0.3);
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.degree {
+  @include display(1rem, 700);
+  color: $text;
+  margin-bottom: 0.4rem;
+}
+
+.institution {
+  @include mono(11px, 0.08em);
+  color: $text3;
+}
