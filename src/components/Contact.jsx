@@ -22,7 +22,7 @@ export default function Contact() {
   return (
     <section id="contact" ref={ref}>
       <div className="wrapper">
-        <p className={styles.label}>Contact</p>
+        <p className={styles.label}>07 — Contact</p>
 
         <div className={styles.grid}>
           <div className={styles.intro}>

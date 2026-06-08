@@ -103,7 +103,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className={styles.portfolio}>
       <div className="wrapper">
-        <p ref={labelRef} className={styles.label}>06 — Portfolio</p>
+        <p ref={labelRef} className={styles.label}>05 — Portfolio</p>
 
         <div className={styles.tabs} role="tablist" aria-label="CMS filter">
           {GROUPS.map((group) => (

@@ -39,7 +39,7 @@
 }
 
 .name {
-  @include display(clamp(3rem, 8vw, 5.5rem), 800);
+  @include display(clamp(2.8rem, 8vw, 5.5rem), 800);
   line-height: 0.95;
   letter-spacing: -0.03em;
   margin-bottom: 0.2em;

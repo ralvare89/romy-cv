@@ -30,7 +30,7 @@ export default function References({ references }) {
   return (
     <section id="refs" className={styles.refs}>
       <div className="wrapper">
-        <p ref={labelRef} className={styles.label}>07 — References</p>
+        <p ref={labelRef} className={styles.label}>06 — References</p>
 
         <div ref={gridRef} className={styles.grid}>
           {references.map((ref) => (
