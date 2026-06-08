@@ -23,7 +23,7 @@
 
 .links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -35,5 +35,27 @@
 
   &:hover {
     color: $accent2;
+  }
+}
+
+.linkedinBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: $radius-sm;
+  color: $text3;
+  background: transparent;
+  transition: color 0.2s, background 0.2s;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    color: $accent2;
+    background: rgba(10, 102, 194, 0.1);
   }
 }
